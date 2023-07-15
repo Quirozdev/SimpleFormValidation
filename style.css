@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 8px;
+  padding: 32px;
+  background-color: antiquewhite;
+}
+
+.input-label-container {
+  display: grid;
+  gap: 6px;
+}
+
+.input-label-container > label {
+  justify-self: center;
+}
+
+.input-label-container > input,
+.input-label-container > select {
+  padding: 4px;
+  border-radius: 8px;
+  border: 2px solid black;
+  outline: none;
+}
+
+.input-label-container > input:focus,
+.input-label-container > select:focus {
+  border: 2px solid yellow;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+.email-container,
+button[type='submit'] {
+  grid-column: 1 / -1;
+}
+
+button[type='submit'] {
+  padding: 8px 16px;
+  border: 2px solid black;
+  background-color: #ffd242;
+}
+
+button[type='submit']:hover {
+  background-color: #ffd378;
+}
