@@ -8,10 +8,17 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <form id="form">
+    <form id="form" novalidate>
       <div class="input-label-container email-container">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="email@test.com"
+          autofocus
+        />
+        <span class="email-error-msg error-msg"></span>
       </div>
       <div class="input-label-container country-container">
         <label for="country">Country</label>
@@ -23,15 +30,18 @@
       </div>
       <div class="input-label-container zip-code-container">
         <label for="zip-code">Zip Code</label>
-        <input type="text" id="zip-code" name="zip-code" />
+        <input type="text" id="zip-code" name="zip-code" placeholder="93201" />
+        <span class="zip-code-error-msg error-msg"></span>
       </div>
       <div class="input-label-container">
         <label for="password">Password</label>
         <input type="password" id="password" name="password" />
+        <span class="password-error-msg error-msg"></span>
       </div>
       <div class="input-label-container">
         <label for="confirm-password">Confirm Password</label>
         <input type="password" name="confirm-password" id="confirm-password" />
+        <span class="confirm-password-error-msg error-msg"></span>
       </div>
       <button type="submit">Submit</button>
     </form>
